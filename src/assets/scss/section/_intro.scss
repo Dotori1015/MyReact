@@ -1,0 +1,114 @@
+#intro {height: 100vh;}
+
+.intro_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 16px;
+
+    @media (max-width:800px) {
+        justify-content: center;
+    }
+
+    .intro_title {
+        font-size: 9.7vw;
+        text-transform: uppercase;
+        font-weight: 800;
+        white-space: nowrap;
+        text-indent: -0.5vw;
+
+        @media (max-width: 800px) {
+            font-size: 9vw;
+        }
+        @media (max-width: 320px) {
+            display: none;
+        }
+    }
+
+    .intro_lines {
+        width: 100%;
+
+        .line {
+            display: block;
+            width: 100%;
+            height: 1px;
+            background-color: var(--black);
+            margin-bottom: 0.5vw;
+
+            &:nth-of-type(1) {height: 1px;}
+            &:nth-of-type(2) {height: 2px;}
+            &:nth-of-type(3) {height: 5px;}
+            &:nth-of-type(4) {height: 9px;}
+            &:nth-of-type(5) {height: 13px;}
+            &:nth-of-type(6) {height: 17px;}
+            &:nth-of-type(7) {height: 25px; margin-bottom: 0;}
+        }
+    }
+    .intro_lines.bottom {
+        display: none;
+
+        @media (max-width:800px) {
+            display: block;
+        }
+
+        .line {
+            margin-top: 0.5vw;
+            margin-bottom: 0vw;
+
+            &:nth-of-type(1) {height: 25px; margin-top: 0;}
+            &:nth-of-type(2) {height: 17px;}
+            &:nth-of-type(3) {height: 13px;}
+            &:nth-of-type(4) {height: 9px;}
+            &:nth-of-type(5) {height: 5px;}
+            &:nth-of-type(6) {height: 2px;}
+            &:nth-of-type(7) {height: 1px;}
+        }
+    }
+
+
+    .intro_text {
+        width: 100%;
+        height: 40vh;
+        background-color: var(--black);
+        color: var(--white);
+        @include flex_center;
+        flex-direction: column;
+        position: relative;
+        cursor: default;
+
+        .text {
+            font-size: 3vw;
+            text-align: center;
+            line-height: 1.2;
+            font-weight: 900;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 10;
+            transition: all 0.3s;
+
+            @media (max-widht: 800px) {
+                font-size: 5vw;
+            }
+        }
+        .img {
+            @include position_center;
+            z-index: 9;
+            width: 30vh;
+            border-radius: 50%;
+            overflow: hidden;
+            filter: grayscale(1);
+            transition: all 0.3s;
+
+            @media (max-width : 400px) {
+                width: 80%;
+            }
+        }
+
+        &:hover .text {opacity: 0;}
+        &:hover .img {filter: grayscale(0);}
+    }
+
+}
