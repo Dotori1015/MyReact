@@ -1,0 +1,105 @@
+#site {}
+
+.site_inner {
+    padding: 16px;
+
+    .site_title {
+        width: 70%;
+        height: 5vw;
+        font-size: 4vw;
+        font-weight: 900;
+        line-height: 1.6;
+        font-family: var(--mainKor-font);
+        text-transform: uppercase;
+        color: var(--black100);
+        border-bottom: 0.4vw solid var(--black100);
+        margin-bottom: 100px;
+        position: sticky;
+        left: 0;
+        top: 68px;
+        background-color: var(--mainBg-color);
+
+        em {
+            font-weight: 400;
+            font-size: 1.25rem;
+            line-height: 2;
+        }
+    }
+
+    .site_item {
+        height: 70vh;
+        @include flex_center;
+        flex-direction: column;
+        position: sticky;
+        left: 0;
+
+        &.s1 {background-color: var(--subBg100); top: 180px;}
+        &.s2 {background-color: var(--subBg200); top: 200px;}
+        &.s3 {background-color: var(--subBg300); top: 220px;}
+        &.s4 {background-color: var(--subBg400); top: 240px;}
+
+        .num {
+            position: absolute;
+            left: 1vw;
+            top: 1vw;
+            font-size: 5vw;
+            font-weight: 900;
+            font-family: var(--mainNum-font);
+        }
+        .text {
+            text-align: center;
+            margin-bottom: 1.2rem;
+
+            &>div {
+                font-size: 3vw;
+                text-transform: uppercase;
+                // text-decoration: underline;
+                line-height: 1.2;
+                font-weight: 500;
+            }
+        }
+        .title {
+            font-family: var(--mainKor-font);
+            margin-bottom: 1.2rem;
+        }
+        .btn {
+
+            & > a {
+                // text-decoration: underline;
+                border: 1px solid var(--black100);
+                padding: 2px 7px;
+                text-transform: capitalize;
+                display: inline-block;
+                margin: 0 0.5vw;
+                font-size: 16px;
+                transition: all 0.3s;
+
+                &:hover {
+                    color: var(--white);
+                }
+            }
+        }
+        .info {
+            position: absolute;
+            left: 0;
+            bottom: 5%;
+            width: 98%;
+            margin-left: 1%;
+            border-top: 1px solid var(--black);
+            border-bottom: 1px solid var(--black);
+            @include flex_between_ju;
+
+            span {
+                font-size: 12px;
+                padding: 3px 0;
+                text-transform: uppercase;
+            }
+        }
+
+
+
+    }
+
+   
+
+}
