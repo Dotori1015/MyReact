@@ -1,11 +1,8 @@
 import React from 'react';
-import profile from '../assets/images/profile.png';
 import about from '../assets/images/About.png';
 
-const introText = {
-    title : "port developer",
-    desc : ["talent is","found at the end of the","effort"]
-}
+import {introText} from "../contants";
+
 
 const Intro = () => {
     return (

@@ -1,51 +1,6 @@
 import React from 'react'
+import {siteText} from '../contants';
 
-const siteText = [
-    {
-        text: ["make", "site compliant with", "html"],
-        title: "2차 포트폴리오",
-        code: "/",
-        view: "/",
-        info: [
-            "site coding",
-            "production period : 2Day",
-            "use stack : HTML5, CSS3, Javascript, jQuery"
-        ]
-    },
-    {
-        text: ["make", "site compliant with", "css"],
-        title: "팀 프로젝트",
-        code: "/",
-        view: "/",
-        info: [
-            "site coding",
-            "production period : 7Day",
-            "use stack : HTML5, CSS3, Javascript, jQuery"
-        ]
-    },
-    {
-        text: ["make", "site compliant with", "react"],
-        title: "리바트 리디자인",
-        code: "/",
-        view: "/",
-        info: [
-            "site coding",
-            "production period : 3Day",
-            "use stack : HTML5, SCSS, React, Javascript"
-        ]
-    },
-    {
-        text: ["make", "site compliant with", "jQuery"],
-        title: "1차 포트폴리오",
-        code: "/",
-        view: "/",
-        info: [
-            "site coding",
-            "production period : 10Day",
-            "use stack : HTML5, CSS3, jQuery"
-        ]
-    },
-]
 
 const Site = () => {
     return (
